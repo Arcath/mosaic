@@ -1,0 +1,11 @@
+<h1>Mosaic</h1>
+
+Application Root: <%= @responder.info[:root] %><br />
+Mosaic Version: <%= Mosaic::VERSION %><br />
+Sinatra Version: <%= Sinatra::VERSION %><br />
+Responders:<br />
+<ul>
+	<% Mosaic.responders.each do |path, responder|%>
+	<li><b><%= path%></b> - <%= responder.first.inspect %></li>
+	<% end %>
+</ul>
