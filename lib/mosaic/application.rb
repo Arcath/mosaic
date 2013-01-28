@@ -1,8 +1,11 @@
 module Mosaic
+  # Sinatra Application
+  # Used in config.ru to create the application and run it
   class Application < Sinatra::Base
     set :sessions, true
     set :root, Mosaic.root if Mosaic.root
     
+    # Provides rails like helper methods e.g. link_to
     register Sinatra::StaticAssets
     
     puts "Middleware load order:"

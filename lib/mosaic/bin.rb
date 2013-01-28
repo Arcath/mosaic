@@ -1,4 +1,5 @@
 module Mosaic
+  # The mosaic command class, used to create new applications
   class Bin
     def initialize(args)
       @args = args

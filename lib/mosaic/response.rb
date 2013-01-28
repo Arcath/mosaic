@@ -1,4 +1,5 @@
 module Mosaic
+  # Used to build a response for sinatra to serve
   class Response
     attr_accessor :content_type, :content, :layout, :response_code, :format
     attr_reader :request

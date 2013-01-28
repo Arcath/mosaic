@@ -1,5 +1,7 @@
 # Mosaic
 
+[![Status](https://secure.travis-ci.org/Arcath/mosaic.png?branch=master)](http://travis-ci.org/Arcath/mosaic)
+
 A simple MOdular Sinatra ApplICation framework.
 
 ## Installation
