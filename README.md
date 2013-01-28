@@ -1,24 +1,22 @@
 # Mosaic
 
-TODO: Write a gem description
+A simple MOdular Sinatra ApplICation framework.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'mosaic'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install via rubygems using:
 
     $ gem install mosaic
 
 ## Usage
 
-TODO: Write usage instructions here
+Create a new mosaic application using:
+
+    $ mosaic new NAME
+
+where NAME is the name of your new application.
+
+This gives you a very basic application with the basic folder structure required to make it work.
 
 ## Contributing
 
