@@ -56,6 +56,11 @@ module Mosaic
       @response
     end
     
+    # Returns the request object for use in the views
+    def request
+      @request
+    end
+    
     private
     
     def contained_view(file)

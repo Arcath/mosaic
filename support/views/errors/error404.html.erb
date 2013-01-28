@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Error 404</title>
+	<style type="text/css">
+	body{
+		font-family:helvetica;
+	}
+	h1{
+		margin:auto;
+		width:300px;
+		text-align:center;
+		color:red;
+		border-bottom:dashed red 1px;
+	}
+	h2{
+		margin:auto;
+		margin-top:10px;
+		width:300px;
+		text-align:center;
+	}
+	</style>
+</head>
+<body>
+	<h1>Error 404</h1>
+	<h2><%= @request.path_info%></h2>
+</body>
+</html>
