@@ -23,7 +23,5 @@ require "mosaic/version"
 # Classes
 require "mosaic/module"
 require "mosaic/response"
-# Required Modules
-require "mosaic/modules/mosaic_layout"
 # Stores
 require "mosaic/stores/yaml"
