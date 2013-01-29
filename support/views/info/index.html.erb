@@ -1,11 +1,17 @@
 <h1>Mosaic</h1>
 
-Application Root: <%= @responder.info[:root] %><br />
-Mosaic Version: <%= Mosaic::VERSION %><br />
-Sinatra Version: <%= Sinatra::VERSION %><br />
-Responders:<br />
+Application Root: <b><%= File.expand_path(Mosaic.root) %></b><br />
+Mosaic Version: <b><%= Mosaic::VERSION %></b><br />
+Sinatra Version: <b><%= Sinatra::VERSION %></b><br />
+Responders:
 <ul>
-	<% Mosaic.responders.each do |path, responder|%>
-	<li><b><%= path%></b> - <%= responder.first.inspect %></li>
+	<% Mosaic.responders.keys.sort.reverse.each do |key|%>
+	<li><b><%= key %></b> - <%= Mosaic.responders[key].first.inspect %></li>
+	<% end %>
+</ul>
+Middleware:
+<ul>
+	<% Mosaic.middleware.each do |middleware| %>
+	<li><b><%= middleware.inspect %></b></li>
 	<% end %>
 </ul>

@@ -2,9 +2,23 @@
 <html>
 <head>
 	<title>Mosaic Info</title>
-	<%= stylesheet_link_tag "/__mosaic__/layout.css"%>
+	<style type="text/css">
+	body{
+		font-family:helvetica;
+		background-color:#9bf;
+		color:#444;
+	}
+	.container{
+		background-color:#fff;
+		width:600px;
+		margin:auto;
+		padding:10px;
+	}
+	</style>
 </head>
 <body>
-	<%= yield %>
+	<div class="container">
+		<%= yield %>
+	</div>
 </body>
 </html>
