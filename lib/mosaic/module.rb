@@ -25,6 +25,8 @@ module Mosaic
   # The master class for all modules
   # Should be inhertied by any class that gets used in Mosaic::Aplication
   class Module
+    attr_reader :response, :params, :request
+    
     # Creates a new responder, called by Mosaic::Application for every request that uses a given module
     # Takes the request object and the current path as input
     def initialize(request, path)
@@ -49,16 +51,6 @@ module Mosaic
     #    provide_middleware Foo:Middleware
     def self.provide_middleware(middleware)
       Mosaic.add_middleware(middleware)
-    end
-    
-    # Returns the Moasic::Response object for use in the views
-    def response
-      @response
-    end
-    
-    # Returns the request object for use in the views
-    def request
-      @request
     end
     
     private
