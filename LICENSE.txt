@@ -1,4 +1,4 @@
-Copyright (c) 2013 Arcath
+Copyright (c) 2013 Adam Laycock (Arcath)
 
 MIT License
 
