@@ -16,6 +16,7 @@ module Mosaic
         @response.response_code = response_code
         @response.content = view
         @response.layout = set_layout
+        @response.output_format = @request.path_info.split(".").last
       end
       
       # Work out what view to serve
@@ -30,7 +31,7 @@ module Mosaic
       
       # Use no layout for 404
       def set_layout
-        response_code == 200 ? :'layouts/application.html' : nil
+        response_code == 200 ? :"layouts/application.#{@response.output_format}" : nil
       end
       
       # Work out the response code

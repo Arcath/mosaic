@@ -35,7 +35,12 @@ module Mosaic
       @params = request.params
       chunks = path.split("/").collect { |x| x if x =~ /:/ }
       chunks.each do |chunk|
-        @params[chunk.gsub(/:/,'').to_sym] = @request.path_info.split("/")[path.split("/").index(chunk)] if chunk
+        if chunk
+          key = chunk.gsub(/:/,'')
+          key.gsub!(/(.*?)\./,'')
+          key.gsub!(/\?/,'')
+          @params[key.to_sym] = @request.path_info.split("/")[path.split("/").index(chunk)]
+        end
       end
     end
     

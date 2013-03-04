@@ -1,15 +1,15 @@
 module Mosaic
   # Used to build a response for sinatra to serve
   class Response
-    attr_accessor :content_type, :content, :layout, :response_code, :format
+    attr_accessor :content, :layout, :response_code, :view_format, :output_format
     attr_reader :request
     
     def initialize(request)
-      @format = :erb
-      @layout = :'layouts/application.html'
+      @view_format = :erb
+      @output_format = :html
+      @layout = :'layouts/application'
       @request = request
       @response_code = 200
-      @content_type = "text/html"
     end
   end
 end

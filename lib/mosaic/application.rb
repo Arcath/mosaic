@@ -23,7 +23,7 @@ module Mosaic
         @responder = Mosaic.responders[key][0].new(request, key)
         @responder.handle
         @params = request.params
-        self.send(@responder.response.format, @responder.response.content, :layout => @responder.response.layout)
+        self.send(@responder.response.view_format, @responder.response.content, :layout => @responder.response.layout)
       end
     end
   end
