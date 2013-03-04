@@ -18,7 +18,6 @@ module Mosaic
     puts "Route load order:"
     
     Mosaic.responders.keys.sort.reverse.each do |key|
-      puts key
       self.send(Mosaic.responders[key][1], key) do
         @responder = Mosaic.responders[key][0].new(request, key)
         @responder.handle
