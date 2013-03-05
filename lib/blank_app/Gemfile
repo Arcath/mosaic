@@ -6,5 +6,6 @@ gem 'mosaic'
 # Mosaic Required Gems
 gem 'sinatra-static-assets', require: 'sinatra/static_assets'
 
-# Your Gems
-#gem 'sass' # Required for Mosaic::Modules::Sass
+# Sprocket Gems
+#gem 'sass'
+#gem 'coffee-script'
