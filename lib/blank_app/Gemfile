@@ -5,6 +5,7 @@ gem 'mosaic'
 
 # Mosaic Required Gems
 gem 'sinatra-static-assets', require: 'sinatra/static_assets'
+gem 'sprockets', '~> 2.9'
 
 # Sprocket Gems
 #gem 'sass'
