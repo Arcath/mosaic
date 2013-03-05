@@ -31,6 +31,10 @@ module Mosaic
       copy_command = "cp -r #{@root_path}/lib/blank_app ./#{application_name}"
       puts "Creating new application \"#{application_name}\""
       system(copy_command)
+      system("mkdir -p ./#{application_name}/assets")
+      system("mkdir -p ./#{application_name}/assets/css")
+      system("mkdir -p ./#{application_name}/assets/js")
+      system("mkdir -p ./#{application_name}/public")
       puts "Empty app copied!"
       puts "Running bundler"
       system("cd #{application_name}; bundle install")
