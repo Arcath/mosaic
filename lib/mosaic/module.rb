@@ -30,6 +30,7 @@ module Mosaic
     # Creates a new responder, called by Mosaic::Application for every request that uses a given module
     # Takes the request object and the current path as input
     def initialize(request, path)
+      @path = path
       @request = request
       @response = Mosaic::Response.new(request)
       @params = request.params
@@ -62,6 +63,14 @@ module Mosaic
     
     def contained_view(file)
       File.read(File.expand_path("../../../support/views/#{file}", __FILE__))
+    end
+    
+    def handle_statically(manual_path = nil)
+      static_request = @request
+      static_request.path_info = manual_path if manual_path
+      static_module = Mosaic::Modules::Static.new(static_request, @path)
+      static_module.handle
+      @response = static_module.response
     end
   end
   

@@ -18,4 +18,10 @@ describe Mosaic::Module do
     # This should have been set when TestModule was declared
     Mosaic.responders["/"].should be_a Array
   end
+  
+  it "should allow you to use handle_statically" do
+    test_module = TestModule.new(DummyRequest.new("/foo/widget"), "/foo/:bar")
+    test_module.handle
+    test_module.response.response_code.should eq 404
+  end
 end

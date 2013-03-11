@@ -3,9 +3,15 @@ require "bundler"
 
 Bundler.require
 
+require 'mosaic/modules/static'
+
 class TestModule < Mosaic::Module
   respond_to :get, "/"
   respond_to :get, "/foo/:bar"
+  
+  def handle
+    handle_statically
+  end
 end
 
 class DummyRequest
