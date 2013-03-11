@@ -12,6 +12,8 @@ module Mosaic
     def handle_arguments
       if @args.include?("new")
         new_application
+      elsif @args.include?("-v")
+        puts Mosaic::VERSION
       else
         help_page
       end
