@@ -2,6 +2,8 @@
 
 [![Status](https://secure.travis-ci.org/Arcath/mosaic.png?branch=master)](http://travis-ci.org/Arcath/mosaic)
 
+[rDoc](http://rdoc.info/github/Arcath/mosaic/master/frames) - [wiki](https://github.com/Arcath/mosaic/wiki)
+
 A simple MOdular Sinatra ApplICation framework.
 
 ## Installation
