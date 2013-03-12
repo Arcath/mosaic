@@ -36,7 +36,7 @@ module Mosaic
       
       # Work out the response code
       def response_code
-        File.exists?("views/#{file}.erb") ? 200 : 404
+        File.exists?("#{Mosaic.root}/views/#{file}.erb") ? 200 : 404
       end
     end
   end

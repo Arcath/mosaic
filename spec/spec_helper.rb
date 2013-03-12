@@ -3,6 +3,8 @@ require "bundler"
 
 Bundler.require
 
+Mosaic.set_root(File.expand_path("../../lib/blank_app", __FILE__))
+
 require 'mosaic/modules/static'
 
 class TestModule < Mosaic::Module
