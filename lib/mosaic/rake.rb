@@ -1,3 +1,7 @@
+task :default do
+  puts "List rake tasks with `rake -T`"
+end
+
 namespace :mosaic do
   desc "List all the paths and which module responds to it"
   task :paths do
